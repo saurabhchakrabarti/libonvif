@@ -427,7 +427,7 @@ int main(int argc, char **argv)
 					}
 					profileCheck(onvif_data, args);
 					if (getSnapshotUri(onvif_data)) throw std::runtime_error(cat("get snapshot - ", onvif_data->last_error));
-					std::string uri(onvif_data->stream_uri);
+					std::string uri(onvif_data->snapshot_uri);
 					if (add_pass) {
 						uri = snapshot_with_pass(onvif_data);
 					}
